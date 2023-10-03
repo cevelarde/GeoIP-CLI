@@ -18,17 +18,21 @@ Before using this program, you will need the following:
 
 ## Usage
 
-1. Open a terminal or command prompt.
+1. Open a terminal or command prompt on the root project directory.
 
-2. Run the program with the IP address you want to look up:
+2. Run the following cmd to build the container as well as run the container:
+   - docker build -t cli_geoip --rm .
+   - docker run -it --name cli_geoip_container --rm cli_geoip
 
-   python3 cli_lat_long.py 134.201.250.155
+3. Run the program with the IP address you want to look up:
+
+   python cli_lat_long.py 134.201.250.155
 
    You can replace the '134.201.250.155' IP address with the IP address you want to query.
 
-3. The program will make an HTTP request to the IPStack API and display the latitude and longitude information for the provided IP address.
+4. The program will make an HTTP request to the IPStack API and display the latitude and longitude information for the provided IP address.
 
-4. You can use the program's output as part of other Unix tools or scripts in your data processing pipeline.
+5. You can use the program's output as part of other Unix tools or scripts in your data processing pipeline.
 
 ## Security
 
